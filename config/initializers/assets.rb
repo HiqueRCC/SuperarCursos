@@ -11,3 +11,5 @@ Rails.application.config.assets.version = '1.0'
 # Rails.application.config.assets.precompile += %w( search.js )
 Rails.application.config.assets.precompile += %w( superar.js )
 Rails.application.config.assets.precompile += %w( superar.css )
+Rails.application.config.assets.precompile += %w( bootstrap-generators.scss )
+Rails.application.config.assets.precompile += %w( bootstrap-variables.scss )
