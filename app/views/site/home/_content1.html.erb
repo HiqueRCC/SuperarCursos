@@ -13,13 +13,19 @@
                     <!-- Wrapper for slides -->
                     <div class="carousel-inner">
                         <div class="item active">
-                            <%= image_tag "img/slide-5.jpg", :class => "img-responsive img-full" %>
+                            <%= link_to ouro_preto_cursos_index_path, :class => "img-responsive img-full"  do %>
+                               <%= image_tag "img/slide-5.jpg" %>
+                            <% end %>
                         </div>
                         <div class="item">
-                            <%= image_tag "img/slide-4.jpg", :class => "img-responsive img-full" %>
+                            <%= link_to ouro_preto_cursos_index_path, :class => "img-responsive img-full"  do %>
+                               <%= image_tag "img/slide-4.jpg" %>
+                            <% end %>
                         </div>
                         <div class="item">
-                            <%= image_tag "img/slide-3.jpg", :class => "img-responsive img-full" %>
+                            <%= link_to ouro_preto_cursos_index_path, :class => "img-responsive img-full"  do %>
+                               <%= image_tag "img/slide-3.jpg" %>
+                            <% end %>
                         </div>
                     </div>
 
