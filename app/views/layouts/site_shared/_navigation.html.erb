@@ -1,0 +1,64 @@
+<!-- Navigation -->
+<nav class="navbar navbar-default backg" role="navigation" style="top: -50px;">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <!-- navbar-brand is hidden on larger screens, but visible when the menu is collapsed -->
+            <a class="navbar-brand" href="index.html">Superar Cursos</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse backg" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="fixed">
+                    <%= link_to 'HOME', site_home_index_path, {:style=>'color:#FFFFFF;', :class => "page-scroll"} %>
+                </li>
+                <li class="dropdown">
+                  <%= link_to 'QUEM SOMOS', quem_somos_index_path, {:style=>'color:#FFFFFF;', :class => "page-scroll"} %>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color: white;">ESCOLA<b class="caret"></b></a>
+                      <ul class="dropdown-menu fixed">
+                          <li>
+                            <%= link_to 'CURSOS DISPONÍVEIS', ouro_preto_cursos_index_path, {:style=>'color:#FFFFFF;', :class => "page-scroll"} %>
+                          </li>
+                          <li class="divider"></li>
+                          <li>
+                            <%= link_to 'CURSO ASB', ouro_preto_formacao_aux_saude_bucal_index_path, {:style=>'color:#FFFFFF;', :class => "page-scroll"} %>
+                          </li>
+                          <li class="divider"></li>
+                          <li>
+                            <%= link_to 'UNIDADES', encontrenos_index_path, {:style=>'color:#FFFFFF;', :class => "page-scroll"} %>
+                          </li>
+                          <li class="divider"></li>
+                          <li>
+                            <%= link_to 'INSCRIÇÃO', new_ouro_preto_cadastro_path, {:style=>'color:#FFFFFF;', :class => "page-scroll"} %>
+                          </li>
+                      </ul>
+               </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color: white;">INTRANET<b class="caret"></b></a>
+                  <ul class="dropdown-menu fixed">
+                      <li>
+                        <%= link_to 'AREA DO ALUNO', area_do_aluno_index_path, {:style=>'color:#FFFFFF;', :class => "page-scroll"} %>
+                      </li>
+                      <li class="divider"></li>
+                      <li>
+                        <%= link_to 'AREA DO PROFESSOR', area_do_professor_index_path, {:style=>'color:#FFFFFF;', :class => "page-scroll"} %>
+                      </li>
+                  </ul>
+              </li>
+              <li>
+                <%= link_to 'CONTATO', encontrenos_index_path, {:style=>'color:#FFFFFF;', :class => "page-scroll"} %>
+              </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>

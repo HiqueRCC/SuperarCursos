@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Ouro Preto Cadastros</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Telefone</th>
+      <th>Email</th>
+      <th>Aluno</th>
+      <th>Curso</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ouro_preto_cadastros.each do |ouro_preto_cadastro| %>
+      <tr>
+        <td><%= ouro_preto_cadastro.nome %></td>
+        <td><%= ouro_preto_cadastro.telefone %></td>
+        <td><%= ouro_preto_cadastro.email %></td>
+        <td><%= ouro_preto_cadastro.aluno %></td>
+        <td><%= ouro_preto_cadastro.curso %></td>
+        <td><%= link_to 'Mostrar', ouro_preto_cadastro %></td>
+        <td><%= link_to 'Editar', edit_ouro_preto_cadastro_path(ouro_preto_cadastro) %></td>
+        <td><%= link_to 'Apagar', ouro_preto_cadastro, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<%= link_to 'Download das matrículas em formato EXCEL', ouro_preto_cadastros_path(format: :xlsx) %>
+<br>
+
+<%= link_to 'New Cadastro', new_ouro_preto_cadastro_path %>

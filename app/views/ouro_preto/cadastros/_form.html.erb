@@ -1,0 +1,37 @@
+<%= form_for(@ouro_preto_cadastro) do |f| %>
+  <% if @ouro_preto_cadastro.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@ouro_preto_cadastro.errors.count, "error") %> prohibited this ouro_preto_cadastro from being saved:</h2>
+
+      <ul>
+      <% @ouro_preto_cadastro.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="field">
+    <%= f.label :curso, 'Selecione o CURSO abaixo' %><br>
+    <%= f.select :curso, ['FORMAÇÃO - ASB', 'PROFISSIONALIZANTE - Atendente de Farmácia', 'PROFISSIONALIZANTE - Aux. Administrativo', 'PROFISSIONALIZANTE - Aux. de Veterinário', 'PROFISSIONALIZANTE - Barbeiro', 'PROFISSIONALIZANTE - Cabelereiro', 'PROFISSIONALIZANTE - Estética Facial e Corporal', 'PROFISSIONALIZANTE - Inglês para atendimento ao Cliente', 'PROFISSIONALIZANTE - Garçon e Garçonete','PROFISSIONALIZANTE - Mec. de Motos', 'PROFISSIONALIZANTE - Montagem e Manutenção de Computadores', 'PROFISSIONALIZANTE - Organização de Eventos', 'CURSO DE INFORMÁTICA - Informática Completo', 'TECNOLOGIA DIGITAL - Criação e Edição de Videos', 'TECNOLOGIA DIGITAL - Web Design Profissional', 'TECNOLOGIA DIGITAL - Desenvolvedor de Jogos', 'TECNOLOGIA DIGITAL - Design Gráfico', 'TECNOLOGIA DIGITAL - Fotografia Digital', 'TECNOLOGIA DIGITAL - Programador Desktop', 'TECNOLOGIA DIGITAL - Programador Full Web e Mobile','SUPER IDADE - Informática', 'SUPER IDADE - Inglês', 'SUPER KIDS - Informática', 'SUPER KIDS - Inglês'], class: "form-group" %>
+  </div>
+  <div class="field">
+    <%= f.label :nome %><br>
+    <%= f.text_field :nome, class: "form-control", placeholder: "Nome Completo" %>
+  </div>
+  <div class="field">
+    <%= f.label :telefone %><br>
+    <%= f.text_field :telefone, class: "form-control", placeholder: "Celular (wpp)" %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email, class: "form-control", placeholder: "Email" %>
+  </div>
+  <div class="field">
+    <%= f.label :aluno, "Estuda/Estudou na Escola?" %><br>
+    <%= f.select :aluno, ['SIM', 'NÃO'], class: "form-group dropdown-toggle fa fa-caret-down" %>
+  </div>
+
+  <div class="actions form-group">
+    <%= f.submit "Cadastrar", :class => 'btn btn-lg btn-primary' %>
+  </div>
+<% end %>

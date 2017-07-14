@@ -1,0 +1,6 @@
+wb = xlsx_package.workbook
+    wb.add_worksheet(name: "Cadastros") do |sheet|
+    @ouro_preto_cadastros.each do |ouro_preto_cadastro|
+      sheet.add_row [ouro_preto_cadastro.nome, ouro_preto_cadastro.email,ouro_preto_cadastro.telefone,ouro_preto_cadastro.email,ouro_preto_cadastro.curso]
+    end
+end

@@ -1,0 +1,2 @@
+module OuroPreto::CadastrosHelper
+end

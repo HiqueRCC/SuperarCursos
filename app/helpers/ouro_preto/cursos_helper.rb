@@ -1,0 +1,2 @@
+module OuroPreto::CursosHelper
+end
